@@ -1,0 +1,26 @@
+.search_keyword {
+    font-size: 2rem;
+    font-weight: normal;
+    color: darkslategray;
+}
+
+.videos_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(27.5rem, 1fr));
+    gap: 1rem;
+}
+
+.empty {
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+}
+
+.search_img {
+    width: 18rem;
+}
+
+.empty_instruction {
+    font-size: 2rem;
+    color: darkslategray;
+}

@@ -1,0 +1,58 @@
+.app_header {
+    display: grid;
+    grid-template-columns: max-content auto max-content;
+    grid-template-areas: 'logo search user';
+    place-items: center;
+    gap: 1rem;
+}
+
+.header_logo, .header_user {
+    width: 5rem;
+    grid-area: image;
+}
+.header_logo {
+    grid-area: logo;
+}
+
+.header_user {
+    grid-area: user;
+}
+
+.header_search {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    grid-area: search;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_search:focus-within {
+    border-color: blue;
+}
+
+.input_field {
+    font-size: 1.5rem;
+    color: darkslategray;
+    margin-right: 1rem;
+    border: none;
+}
+
+.input_field:focus {
+    outline: none;
+}
+
+.clear_input_field {
+    font-size: 1.5rem;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .app_header {
+        grid-template-areas: 'logo . user' 'search search search';
+        place-items: unset;
+    }
+  }
